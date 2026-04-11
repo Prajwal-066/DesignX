@@ -115,6 +115,13 @@
         padding: 0.8rem 1.3rem;
         border-radius: 0.7rem;
         font-weight: 600;
+        transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+      }
+
+      .cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px rgba(13, 148, 136, 0.28);
+        filter: brightness(1.05);
       }
 
       .section-two {
@@ -143,6 +150,13 @@
         position: relative;
         background-size: cover;
         background-position: center;
+        transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+      }
+
+      .destination-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 36px rgba(2, 6, 23, 0.35);
+        border-color: rgba(255, 255, 255, 0.75);
       }
 
       .destination-card::before {
@@ -176,6 +190,62 @@
         background: linear-gradient(145deg, #fdf8ee, #faefe2 55%, #f9e9da);
       }
 
+      .section-features {
+        padding: 4.5rem 0;
+        background: linear-gradient(145deg, #dbeafe 0%, #c7d2fe 50%, #e0e7ff 100%);
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .feature-card {
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.9rem;
+        padding: 1.1rem;
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+        transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-4px);
+        border-color: #bfdbfe;
+        box-shadow: 0 16px 30px rgba(37, 99, 235, 0.16);
+      }
+
+      .feature-icon {
+        width: 2.6rem;
+        height: 2.6rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.75rem;
+        background: #dbeafe;
+        color: #1d4ed8;
+        margin-bottom: 0.7rem;
+      }
+
+      .feature-icon svg {
+        width: 1.3rem;
+        height: 1.3rem;
+      }
+
+      .feature-card h4 {
+        margin: 0;
+        color: #0f172a;
+        font-size: 1.05rem;
+      }
+
+      .feature-card p {
+        margin: 0.55rem 0 0;
+        color: #475569;
+        line-height: 1.55;
+        font-size: 0.92rem;
+      }
+
       .booking-wrap {
         text-align: center;
       }
@@ -194,6 +264,13 @@
         border-radius: 0.7rem;
         padding: 0.9rem 1rem;
         font-weight: 600;
+        transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+      }
+
+      .booking-options a:hover {
+        transform: translateY(-2px);
+        background: #111827;
+        box-shadow: 0 12px 20px rgba(17, 24, 39, 0.22);
       }
 
       .section-four {
@@ -246,7 +323,8 @@
         }
 
         .destination-grid,
-        .booking-options {
+        .booking-options,
+        .feature-grid {
           grid-template-columns: 1fr;
         }
 
@@ -322,6 +400,53 @@
               <h4>India</h4>
               <p>Royal heritage, sacred rivers, and mountain-to-coast diversity.</p>
             </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-features">
+      <div class="site-shell">
+        <h3 class="section-title">Why Travelers Choose TraviQ</h3>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3l2.2 4.5L19 8.2l-3.5 3.4.8 4.8L12 14l-4.3 2.4.8-4.8L5 8.2l4.8-.7L12 3z" />
+              </svg>
+            </div>
+            <h4>AI Trip Planner</h4>
+            <p>Build day-by-day routes in seconds based on your budget, vibe, and travel pace.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 7h16M4 12h10M4 17h7" />
+                <circle cx="18" cy="17" r="3" />
+              </svg>
+            </div>
+            <h4>Smart Budget Assistant</h4>
+            <p>Get real-time cost estimates for flights, stays, transport, and activities.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 6h16v12H4z" />
+                <path d="M4 10l8 4 8-4" />
+              </svg>
+            </div>
+            <h4>Instant Visa Guidance</h4>
+            <p>View visa requirements and checklist steps tailored to your destination.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 2" />
+              </svg>
+            </div>
+            <h4>24/7 Travel Support</h4>
+            <p>Access live support for delays, changes, and local assistance whenever needed.</p>
           </article>
         </div>
       </div>
